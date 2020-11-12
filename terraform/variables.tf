@@ -1,11 +1,11 @@
 variable "app_name" {
-    type = string
+  type = string
 }
 
 variable "env_name" {
-    type = string
+  type = string
 }
 
 variable "region" {
-    type = string
+  type = string
 }
