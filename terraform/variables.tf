@@ -19,12 +19,12 @@ variable "hotpath_functions" {
   }))
   default = [
     {
-      name          = "func1"
+      name          = "filter"
       maxBatchSize  = 256
       prefetchCount = 512
     },
     {
-      name          = "func2"
+      name          = "label"
       maxBatchSize  = 256
       prefetchCount = 512
     }
