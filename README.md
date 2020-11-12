@@ -23,4 +23,5 @@ Then, you can see provisioned resource in your Azure.
 ![Result](./documents/images/Result.PNG)
 
 # Appendix
-I utilizes best practice for naming and tagging Azure resources. Please see [this document](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging) for more detail.
+- I utilizes best practice for naming and tagging Azure resources. Please see [this document](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging) for more detail.
+- You should consider to use KeyVault for keeping your connection string securely in production. I don't use it in this repo for understanding best practice easily.
