@@ -42,8 +42,10 @@ resource "azurerm_function_app" "hotpath" {
     "APPINSIGHTS_INSTRUMENTATIONKEY"                                                     = azurerm_application_insights.hotpath.instrumentation_key
     "FilterEventHubNamespaceConnectionString"                                            = azurerm_eventhub_namespace.hotpath[0].default_primary_connection_string
     "FilterEventHubName"                                                                 = azurerm_eventhub.hotpath[0].name
+    "AzureWebJobs.FilterFunction.Disabled"                                               = var.hotpath_functions[count.index].filter_disable
     "LabelEventHubNamespaceConnectionString"                                             = azurerm_eventhub_namespace.hotpath[1].default_primary_connection_string
     "LabelEventHubName"                                                                  = azurerm_eventhub.hotpath[1].name
+    "AzureWebJobs.LabelFunction.Disabled"                                                = var.hotpath_functions[count.index].label_disable
     "AzureFunctionsJobHost__extensions__eventHubs__eventProcessorOptions__maxBatchSize"  = var.hotpath_functions[count.index].maxBatchSize
     "AzureFunctionsJobHost__extensions__eventHubs__eventProcessorOptions__prefetchCount" = var.hotpath_functions[count.index].prefetchCount
   }

@@ -19,6 +19,8 @@ variable "hotpath_functions" {
     ehn_capacity     = number
     ehn_max_capacity = number
     eh_partition     = number
+    filter_disable   = bool
+    label_disable    = bool
   }))
   default = [
     {
@@ -28,6 +30,8 @@ variable "hotpath_functions" {
       ehn_capacity     = 2
       ehn_max_capacity = 8
       eh_partition     = 8
+      filter_disable   = false
+      label_disable    = true
     },
     {
       name             = "label"
@@ -36,6 +40,8 @@ variable "hotpath_functions" {
       ehn_capacity     = 2
       ehn_max_capacity = 8
       eh_partition     = 8
+      filter_disable   = true
+      label_disable    = false
     }
   ]
 }
